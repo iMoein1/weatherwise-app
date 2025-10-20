@@ -203,7 +203,7 @@ Create a new issue with details about your problem
 We'll get back to you as soon as possible!
 
 <div align="center">
-Made with ❤️ and ☕ by [Your Name]
+Made with ❤️ and ☕ by [ooz or(MOEIN IMANI])
 
 If you find this project helpful, please give it a ⭐!
 
