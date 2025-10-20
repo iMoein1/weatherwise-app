@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">
+                <i class="fas fa-cloud-sun"></i>
+                Weather Forecast
+            </h1>
+            <div class="theme-controls">
+                <div class="theme-picker">
+                    <label for="themeColor">Theme Color:</label>
+                    <input type="color" id="themeColor" value="#4f46e5">
+                </div>
+                <div class="theme-picker">
+                    <label for="bgColor">Background Color:</label>
+                    <input type="color" id="bgColor" value="#f8fafc">
+                </div>
+                <button id="removeArchive" class="btn-danger">
+                    <i class="fas fa-trash"></i>
+                    Clear Archive
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="search-section">
+                <div class="search-box">
+                    <div class="input-group">
+                        <input type="text" id="input" placeholder="Search for a city...">
+                        <button id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="suggestions">
+                        <div class="sugg-loading">
+                            <div class="loader"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Nature Image">
+                </div>
+            </section>
+
+            <section class="archive-section">
+                <h2 class="section-title">
+                    <i class="fas fa-history"></i>
+                    City Archive
+                </h2>
+                <div class="archive-container">
+                    <div class="main-loading">
+                        <div class="loader large"></div>
+                    </div>
+                    <div class="cards-container" id="cardsContainer">
+                        <!-- Weather cards will be displayed here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- New Features Section -->
+            <section class="features-section">
+                <div class="features-container">
+                    <!-- Today's Outfit Recommendation -->
+                    <div class="feature-card outfit-recommendation">
+                        <div class="feature-header">
+                            <i class="fas fa-tshirt"></i>
+                            <h3>Today's Outfit</h3>
+                        </div>
+                        <div class="feature-content">
+                            <div class="outfit-icon" id="outfitIcon">
+                                <i class="fas fa-question"></i>
+                            </div>
+                            <p id="outfitText">Select a city to see outfit recommendations</p>
+                            <div class="outfit-details" id="outfitDetails">
+                                <!-- Outfit details will be filled by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity Suggestions -->
+                    <div class="feature-card activity-suggestion">
+                        <div class="feature-header">
+                            <i class="fas fa-hiking"></i>
+                            <h3>Activity Suggestions</h3>
+                        </div>
+                        <div class="feature-content">
+                            <div class="activities-list" id="activitiesList">
+                                <p>Select a city to see activity suggestions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
